@@ -1,0 +1,73 @@
+<div class="container">
+  <h2>Add New Employee</h2>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="addEmployee()">
+        <div class="mb-3">
+          <label for="exampleInputName" class="form-label">Name</label>
+          <input
+            type="name"
+            class="form-control"
+            id="exampleInputName"
+            aria-describedby="nameHelp"
+            [(ngModel)]="addEmployeeRequest.name"
+            [ngModelOptions]="{ standalone: true }"
+          />
+          <!-- <div id="nameHelp" class="form-text">Enter your name</div> -->
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            [(ngModel)]="addEmployeeRequest.email"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input
+            type="number"
+            class="form-control"
+            id="phone"
+            [(ngModel)]="addEmployeeRequest.phone"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="salary" class="form-label">Salary</label>
+          <input
+            type="number"
+            class="form-control"
+            id="salary"
+            [(ngModel)]="addEmployeeRequest.salary"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputDepartment" class="form-label"
+            >Department</label
+          >
+          <input
+            type="department"
+            class="form-control"
+            id="exampleInputPassword1Department"
+            [(ngModel)]="addEmployeeRequest.department"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+</div>

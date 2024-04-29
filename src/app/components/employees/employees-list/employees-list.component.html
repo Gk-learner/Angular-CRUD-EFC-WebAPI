@@ -22,6 +22,5 @@
       </tr>
     </tbody>
   </table>
-  <p *ngIf="!employees">No employee found</p>
+  <p *ngIf="!employees || employees.length === 0">No employee found</p>
 </div>
-<router-outlet> </router-outlet>
